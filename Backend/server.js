@@ -5,6 +5,8 @@ dotenv.config({ path: './config.env' });
 import app from './app.js';
 
 
+import mongoose from "mongoose";
+
 // MongoDB connection string
 // const MONGO_URI = "mongodb+srv://user:OpJOqPZACOoI4okW@cluster0.pwzrm.mongodb.net/";
 
