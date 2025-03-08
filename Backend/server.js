@@ -7,17 +7,6 @@ import app from './app.js';
 
 import mongoose from "mongoose";
 
-// MongoDB connection string
-// const MONGO_URI = "mongodb+srv://user:OpJOqPZACOoI4okW@cluster0.pwzrm.mongodb.net/";
-
-// mongoose
-//     .connect(MONGO_URI) // Removed deprecated options
-//     .then(() => {
-//         console.log("Connected to MongoDB");
-//         app.listen(5000, () => console.log("Server running on port 5000"));
-//     })
-//     .catch((err) => console.log(err));
-
 
   const db = process.env.MONGO_STRING.replace(
       '<PASSWORD>',
