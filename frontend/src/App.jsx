@@ -5,6 +5,7 @@ import Contact from "../pages/Contact"
 import AboutUS from "../pages/AboutUs"
 import Ambulance from "../pages/Ambulance"
 import Pharmacy from "../pages/Pharmacy"
+import Admin from "../pages/Admin/AHome"
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
       <Route path="/about" element={<AboutUS/>}/>
       <Route path="/ambulance" element={<Ambulance/>}/>
       <Route path="/pharmacy" element={<Pharmacy/>}/>
+      <Route path="/admin" element={<Admin/>}/>
+
 
     </Routes>
     </BrowserRouter>
