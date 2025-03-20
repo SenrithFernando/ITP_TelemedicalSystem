@@ -1,8 +1,11 @@
 
 import { BrowserRouter,Route,Routes } from "react-router-dom"
-import Header from "../components/Header"
 import Home from "../pages/Home"
 import Contact from "../pages/Contact"
+import AboutUS from "../pages/AboutUs"
+import Ambulance from "../pages/Ambulance"
+import Pharmacy from "../pages/Pharmacy"
+import Admin from "../pages/Admin/AHome"
 
 
 function App() {
@@ -10,10 +13,16 @@ function App() {
 
   return (
     <BrowserRouter>
-    <Header/>
     <Routes>
       <Route path="/" element={<Home/>}/>
+      <Route path="/home" element={<Home />} />
       <Route path="/contact" element={<Contact/>}/>
+      <Route path="/about" element={<AboutUS/>}/>
+      <Route path="/ambulance" element={<Ambulance/>}/>
+      <Route path="/pharmacy" element={<Pharmacy/>}/>
+      <Route path="/admin" element={<Admin/>}/>
+
+
     </Routes>
     </BrowserRouter>
   )
