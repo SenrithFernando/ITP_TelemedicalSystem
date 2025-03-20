@@ -5,7 +5,7 @@ import Contact from "../pages/Contact"
 import AboutUS from "../pages/AboutUs"
 import Ambulance from "../pages/Ambulance"
 import Pharmacy from "../pages/Pharmacy"
-import Admin from "../pages/Admin/AHome"
+import Admin from "../pages/PhamacyAdmin/AHome"
 
 
 function App() {

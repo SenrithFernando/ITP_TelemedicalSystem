@@ -1,9 +1,9 @@
 import React from 'react'
 
 import Nav from '../components/Nav/nav'
-import PhaCarousal from '../components/Pharmacy/PhaCarousal'
-import PhaPromoSection from '../components/Pharmacy/PhaPromoSection'
-import PharmacyOrderForm from '../components/Pharmacy/PharmacyOrderForm'
+import PhaCarousal from '../components/PhamacyAdmin/PhaCarousal'
+import PhaPromoSection from '../components/PhamacyAdmin/PhaPromoSection'
+import PharmacyOrderForm from '../components/PhamacyAdmin/PharmacyOrderForm'
 import Fot from '../components/Footer/Fot'
 
 
