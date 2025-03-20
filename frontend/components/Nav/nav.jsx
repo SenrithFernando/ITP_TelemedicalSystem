@@ -6,7 +6,7 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <div className="   transform translate-y-  bg-white shadow-lg rounded-2xl p-4 m-5 justify-between items-center  top-0 left-0 right-0 mx-auto z-10">
+    <div className="   transform translate-y- w-4/5 bg-white shadow-lg rounded-2xl p-4 m-5 justify-between items-center  top-0 left-0 right-0 mx-auto z-10">
       <nav className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
