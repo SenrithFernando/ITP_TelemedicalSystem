@@ -1,5 +1,6 @@
 import PharmacyOrder from '../Model/PharmacyOrderModel.js';
 
+//data select 
 export const getPharmacyOrders = async (req, res, next) => {
     let pharmacyOrders;
     try {
@@ -18,36 +19,42 @@ export const getPharmacyOrders = async (req, res, next) => {
     return res.status(200).json({ pharmacyOrders});
 };
 
-
+//data add
 export const addPharmacyOrder = async (req, res, next) => {
-    const { orderID, orderDate, orderStatus, fullName, PatientID, phone, address, doctorName, quantity, prescriptionID } = req.body;
-
-   let PharmacyOrder;
-
+    
     try {
-        PharmacyOrder = new PharmacyOrder({
-            orderID,
-            orderDate,
-            orderStatus,
-            fullName,
-            PatientID,
-            phone,
-            address,
-            doctorName,
-            quantity,
-            prescriptionID
+        const addorder=await PharmacyOrder.create(req.body)
+        res.status(201).json({
+            success: true,
+            data:{addorder, } ,
         });
-        await PharmacyOrder.save();
+        
     } catch (err) {
-        console.log(err);
+        res.status(500).json({
+            success: false,
+            message: 'Server Error',
+        })
     }
-
-    if (!PharmacyOrder) {
-        const error = new Error('Creating pharmacy order failed, please try again.');
-        return next(error);
-    }
-
-    return res.status(201).json({ pharmacyOrder: createdOrder });
+    
 }
+
+
+
+export const getByID = async (req, res, next) => {
+    try {
+      const getbyIDOrder = await PharmacyOrder.findById(req.params.id);
+      res.status(200).json({
+        success: true,
+        data: {
+            getbyIDOrder,
+        },
+      });
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        message: error.message,
+      });
+    }
+  };
 
 
