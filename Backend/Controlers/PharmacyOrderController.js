@@ -40,7 +40,7 @@ export const addPharmacyOrder = async (req, res, next) => {
 }
 
 
-
+//find by id
 export const getByID = async (req, res, next) => {
     try {
       const getbyIDOrder = await PharmacyOrder.findById(req.params.id);
@@ -59,7 +59,7 @@ export const getByID = async (req, res, next) => {
   };
 
 
-  //update order
+  //update order - not work 
 
 export const updateOrder = async (req, res) => {
     try {
