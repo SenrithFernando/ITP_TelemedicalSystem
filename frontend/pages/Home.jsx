@@ -1,6 +1,12 @@
-export default function Home(){
+import React from 'react'
+import Nav from '../components/Nav/nav'
 
-    return(
-        <h1>hello my friend</h1>
-    )
+function Home() {
+  return (
+    <div>
+      <Nav/>
+    </div>
+  )
 }
+
+export default Home
