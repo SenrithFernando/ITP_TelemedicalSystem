@@ -21,6 +21,7 @@ export const getPharmacyOrders = async (req, res, next) => {
 
 //data add
 export const addPharmacyOrder = async (req, res, next) => {
+    console.log(req.body);
     
     try {
         const addorder=await PharmacyOrder.create(req.body)
@@ -56,5 +57,45 @@ export const getByID = async (req, res, next) => {
       });
     }
   };
+
+
+  //update order
+
+export const updateOrder = async (req, res) => {
+    try {
+      const updatePharmacyOrder = await PharmacyOrder.findByIdAndUpdate(req.params.id, req.body, {
+        new: true,
+        runValidators: true,
+      });
+      res.status(200).json({
+        success: true,
+        data: {
+            updatePharmacyOrder,
+        },
+      });
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        message: error.message,
+      });
+    }
+  };
+
+  //delete order
+  export const deleteOrder = async (req, res) => {
+    try {
+      await PharmacyOrder.findByIdAndDelete(req.params.id);
+      res.status(204).json({
+        success: true,
+        data: null,
+      });
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        message: error.message,
+      });
+    }
+  }
+
 
 

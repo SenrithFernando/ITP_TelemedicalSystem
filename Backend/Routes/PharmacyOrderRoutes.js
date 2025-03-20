@@ -11,6 +11,7 @@ const router = express.Router();
 router.route('/').get(getPharmacyOrders);
 router.route('/').post(addPharmacyOrder);
 router.route('/:id').get(getByID);
+router.route('/:id').put(getByID);
 
 //export
 export default router;

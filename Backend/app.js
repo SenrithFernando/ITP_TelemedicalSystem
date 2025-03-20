@@ -1,14 +1,18 @@
 import express from "express";
-; // Adjust the path as needed
+import cors from "cors";
 import router from "./Routes/PharmacyOrderRoutes.js";
 
 const app = express();
 app.use(express.json());
 
-// Mount the router on a specific path
+// Enable CORS
+app.use(cors({
+    origin: "http://localhost:5173", // Allow frontend
+    methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: "Content-Type, Authorization"
+}));
+
+// Mount the router
 app.use("/pharmacyOrders", router);
-
-// Default route
-
 
 export default app;
