@@ -5,7 +5,16 @@ import Contact from "../pages/Contact"
 import AboutUS from "../pages/AboutUs"
 import Ambulance from "../pages/Ambulance"
 import Pharmacy from "../pages/Pharmacy"
+
 import Admin from "../pages/PhamacyAdmin/AHome"
+
+import Admin from "../pages/Admin/AHome"
+import Prescription from "../pages/PatientPrescription"
+import DocterPrescription from "../pages/DocterAdmin/DocterPrescription"
+import PrescriptionAdd from "../pages/DocterAdmin/PrescriptionAdd"
+import PrescriptionView  from "../pages/DocterAdmin/PrescriptionView"   
+import PatientPreView  from "../pages/PatientPresView"  
+
 
 
 function App() {
@@ -21,7 +30,11 @@ function App() {
       <Route path="/ambulance" element={<Ambulance/>}/>
       <Route path="/pharmacy" element={<Pharmacy/>}/>
       <Route path="/admin" element={<Admin/>}/>
-
+      <Route path="/prescription" element={<Prescription/>}/>
+      <Route path="/docterprescription" element={<DocterPrescription/>}/>
+      <Route path="/prescriptionadd" element={<PrescriptionAdd/>}/>
+      <Route path="/prescriptionview" element={<PrescriptionView/>}/>
+      <Route path="/patientpreview" element={<PatientPreView/>}/>
 
     </Routes>
     </BrowserRouter>
