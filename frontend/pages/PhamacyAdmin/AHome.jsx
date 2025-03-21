@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./Header";
-import Overview from "./Overview";
-import OrderTable from "./OrderTable";
-import SlideBar from "./SlideBar";
+import Header from "../../components/AdminPharmacy/Header";
+import Overview from "../../components/AdminPharmacy/Overview";
+import OrderTable from "../../components/AdminPharmacy/OrderTable";
+import SlideBar from "../../components/AdminPharmacy/SlideBar";
 
 function AHome() {
   return (

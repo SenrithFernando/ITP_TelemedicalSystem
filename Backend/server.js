@@ -7,6 +7,7 @@ import app from './app.js';
 
 import mongoose from "mongoose";
 
+
   const db = process.env.MONGO_STRING.replace(
       '<PASSWORD>',
       process.env.DATABASE_PASSWORD,
