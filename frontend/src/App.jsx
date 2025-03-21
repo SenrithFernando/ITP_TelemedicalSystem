@@ -10,6 +10,7 @@ import Prescription from "../pages/PatientPrescription"
 import DocterPrescription from "../pages/DocterAdmin/DocterPrescription"
 import PrescriptionAdd from "../pages/DocterAdmin/PrescriptionAdd"
 import PrescriptionView  from "../pages/DocterAdmin/PrescriptionView"   
+import PatientPreView  from "../pages/PatientPresView"  
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <Route path="/docterprescription" element={<DocterPrescription/>}/>
       <Route path="/prescriptionadd" element={<PrescriptionAdd/>}/>
       <Route path="/prescriptionview" element={<PrescriptionView/>}/>
+      <Route path="/patientpreview" element={<PatientPreView/>}/>
 
     </Routes>
     </BrowserRouter>

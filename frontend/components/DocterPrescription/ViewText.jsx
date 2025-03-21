@@ -19,7 +19,7 @@ export default function PrescriptionUI() {
           className={`relative p-6 bg-gray-300 rounded-xl shadow-md cursor-pointer transition-all duration-300 ${
             selected === index ? "scale-110 z-10 bg-white border border-black" : "opacity-70"
           }`}
-          style={{ width: selected === index ? "280px" : "220px", height: selected === index ? "380px" : "300px" }}
+          style={{ width: selected === index ? "320px" : "220px", height: selected === index ? "420px" : "300px" }}
         >
           {/* Date */}
           <h2 className="text-lg font-bold">{prescription.day} {prescription.date}</h2>

@@ -1,7 +1,7 @@
 import React from 'react'
-import Sidebar from "../components/Prescription/Sidebar"
-import Header from "../components/Prescription/Header"
-import PrescriptionList from "../components/Prescription/PrescriptionList"
+import Sidebar from "../components/PatientPrescription/Sidebar"
+import Header from "../components/PatientPrescription/Header"
+import PrescriptionList from "../components/PatientPrescription/PrescriptionList"
 
 function PatientPrescription() {
   return (
